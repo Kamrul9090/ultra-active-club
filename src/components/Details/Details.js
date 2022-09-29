@@ -1,5 +1,8 @@
 import React from 'react';
 import './Details.css'
+import Swal from 'sweetalert2';
+
+
 const Details = (props) => {
     const { times, breaks } = props;
     // console.log(breaks);
@@ -8,7 +11,11 @@ const Details = (props) => {
         totalStudyTime = totalStudyTime + time;
     }
     const handleToast = () => {
-        alert('Today my study activities complete')
+        Swal.fire(
+            'Good job!',
+            'Complete your activities',
+            'success'
+        )
     }
     return (
         <div className='mt-10 font-bold'>

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSchool, faLocation } from '@fortawesome/free-solid-svg-icons';
 import "./Carts.css"
 
+
 import './Carts.css'
 import SideCart from '../SideCart/SideCart';
 import Breaks from '../Breaks/Breaks';
@@ -31,13 +32,18 @@ const Carts = () => {
     const handleAddToBreakTime = id => {
         const exists = carts.find(item => item.id === id);
         const newTime = exists.breakTime;
-        setBreakTimes(newTime);
 
-        let timeCart = {
+        const timeCart = {
             break: newTime,
         };
-
         localStorage.setItem('breaks', JSON.stringify(timeCart));
+
+        const storedCart = localStorage.getItem('breaks');
+        if (storedCart) {
+            const parseData = JSON.parse(storedCart);
+            const breakTime = parseData.break;
+            setBreakTimes(breakTime);
+        }
     }
 
 
