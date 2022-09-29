@@ -1,16 +1,16 @@
 import React from 'react';
-
+import './Blogs.css'
 const Blogs = () => {
     return (
-        <div className='w-11/12 m-auto grid grid-cols-1 gap-20 mt-20'>
+        <div className='w-11/12 m-auto grid grid-cols-1 gap-20 mt-20 font-bold'>
             <div>
-                <h1>How Does React Work?</h1>
+                <h1 className='text-3xl'>How Does React Work?</h1>
                 <p>React basically maintains a tree. This tree is able to do efficient diff computations on the nodes.
 
                     Think of HTML code as a tree. In fact, that is exactly how the browser treats DOM . React allows to effectively re-construct my DOM in JavaScript and push only those changes to the DOM which have actually occurred.</p>
             </div>
             <div>
-                <h1>Difference between props and state.</h1>
+                <h1 className='text-3xl'>Difference between props and state.</h1>
                 <p>
                     <li>Props: Props are read only.</li>
                     <li>Props: Props can not be modified.</li>
@@ -19,7 +19,7 @@ const Blogs = () => {
                 </p>
             </div>
             <div>
-                <h1>Use case of useEffect hook</h1>
+                <h1 className='text-3xl'>Use case of useEffect hook</h1>
                 <p>
                     <li>1. Side Effect Runs After Every Render</li>
                     <li>2. Side Effect Runs Only Once After Initial Render</li>

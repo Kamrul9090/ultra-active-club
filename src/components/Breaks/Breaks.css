@@ -1,1 +1,6 @@
-.time-container small:hover {}
+.breakTime {
+    background-color: rgb(40, 40, 192);
+    color: rgb(208, 222, 234);
+    padding: 2px;
+    border-radius: 5px;
+}

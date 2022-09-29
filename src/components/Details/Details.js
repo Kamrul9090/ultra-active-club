@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Details.css'
 const Details = (props) => {
     const { times, breaks } = props;
     // console.log(breaks);

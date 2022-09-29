@@ -7,7 +7,7 @@ const SideCart = ({ faLocation }) => {
         <div>
             <div className='flex items-center space-x-1'>
                 <img className='rounded-full w-1/4 h-10 bg-gray-500' src={img} alt="" />
-                <div>
+                <div className=''>
                     <h4 className='text-xl font-bold'>Kamrul Hasan</h4>
                     <FontAwesomeIcon icon={faLocation}></FontAwesomeIcon>
                     <small className='ml-2'>Khagrachori, Bangladesh</small>

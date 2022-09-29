@@ -7,7 +7,7 @@ const Breaks = (props) => {
             <h1 className='text-xl font-bold my-10'>Break Time</h1>
             <div className='space-x-3 font-bold time-container'>
                 {
-                    carts.map(item => <small onClick={() => handleAddToBreakTime(item.id)}><span>{item.breakTime}m</span></small>)
+                    carts.map(item => <small className='breakTime' onClick={() => handleAddToBreakTime(item.id)}><span>{item.breakTime}m</span></small>)
                 }
             </div>
         </div>

@@ -33,10 +33,6 @@ const Carts = () => {
         const newTime = exists.breakTime;
         setBreakTimes(newTime);
 
-        let breaks = {};
-
-        const storedCart = localStorage.getItem('break');
-
         let timeCart = {
             break: newTime,
         };
