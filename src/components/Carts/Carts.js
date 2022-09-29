@@ -30,9 +30,13 @@ const Carts = () => {
 
     const handleAddToBreakTime = id => {
         const exists = carts.find(item => item.id === id);
-        console.log(exists.breakTime);
-        setBreakTimes(exists.breakTime);
+        const newTime = exists.breakTime;
+        setBreakTimes(newTime);
 
+        let timeCart = {
+            break: newTime,
+        };
+        localStorage.setItem('breaks', JSON.stringify(timeCart));
     }
 
     return (
