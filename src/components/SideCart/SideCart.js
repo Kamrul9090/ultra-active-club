@@ -14,6 +14,21 @@ const SideCart = ({ faLocation }) => {
                 </div>
             </div>
             {/* Weight container */}
+
+            <div className='flex justify-between mt-20 font-bold'>
+                <div>
+                    <h4>50<small className='text-muted'>kg</small></h4>
+                    <h5>Weight</h5>
+                </div>
+                <div>
+                    <h4>6.2<small>fit</small></h4>
+                    <h5>Height</h5>
+                </div>
+                <div>
+                    <h4>22<small>Years</small></h4>
+                    <h5>Age</h5>
+                </div>
+            </div>
             <div>
 
             </div>

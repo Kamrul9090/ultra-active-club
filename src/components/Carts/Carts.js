@@ -5,6 +5,8 @@ import { faSchool, faLocation } from '@fortawesome/free-solid-svg-icons'
 
 import './Carts.css'
 import SideCart from '../SideCart/SideCart';
+import Breaks from '../Breaks/Breaks';
+import Details from '../Details/Details';
 const Carts = () => {
     const [carts, setCarts] = useState([]);
 
@@ -31,6 +33,8 @@ const Carts = () => {
                 </div>
                 <div className="my-info-container p-5 text-center">
                     <SideCart faLocation={faLocation}></SideCart>
+                    <Breaks></Breaks>
+                    <Details></Details>
                 </div>
             </div>
         </div>
