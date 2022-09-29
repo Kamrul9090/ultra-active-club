@@ -10,7 +10,7 @@ const SingleCart = ({ cart, handleAddToCart }) => {
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
                     <p>{about.slice(0, 100)}</p>
-                    <b><p>Study time: {time}</p></b>
+                    <b><p>Study time: 0{time} :hour</p></b>
                     <div className="card-actions justify-end">
                         <button onClick={() => handleAddToCart(time)} className="btn btn-primary">Add To Cart</button>
                     </div>
