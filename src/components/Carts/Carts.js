@@ -9,12 +9,30 @@ import Breaks from '../Breaks/Breaks';
 import Details from '../Details/Details';
 const Carts = () => {
     const [carts, setCarts] = useState([]);
+    const [times, setTimes] = useState([]);
+    const [breaks, setBreakTimes] = useState(0);
 
     useEffect(() => {
         fetch(`data.json`)
             .then(res => res.json())
             .then(data => setCarts(data))
     }, [])
+    const handleAddToCart = time => {
+        if (times) {
+            const newTime = [...times, time];
+            setTimes(newTime);
+        } else {
+            setTimes([time])
+        }
+    }
+
+
+    const handleAddToBreakTime = id => {
+        const exists = carts.find(item => item.id === id);
+        console.log(exists.breakTime);
+        setBreakTimes(exists.breakTime);
+
+    }
 
     return (
         <div>
@@ -27,14 +45,14 @@ const Carts = () => {
                     <h1 className='text-2xl mb-10 font-bold'>Daily Study Activities</h1>
                     <div className='grid grid-cols-3 gap-5'>
                         {
-                            carts.map(cart => <SingleCart key={cart.id} cart={cart}></SingleCart>)
+                            carts.map(cart => <SingleCart handleAddToCart={handleAddToCart} key={cart.id} cart={cart}></SingleCart>)
                         }
                     </div>
                 </div>
                 <div className="my-info-container p-5 text-center">
                     <SideCart faLocation={faLocation}></SideCart>
-                    <Breaks></Breaks>
-                    <Details></Details>
+                    <Breaks carts={carts} handleAddToBreakTime={handleAddToBreakTime}></Breaks>
+                    <Details breaks={breaks} times={times}></Details>
                 </div>
             </div>
         </div>
