@@ -33,17 +33,25 @@ const Carts = () => {
         const newTime = exists.breakTime;
         setBreakTimes(newTime);
 
+        let breaks = {};
+
+        const storedCart = localStorage.getItem('break');
+
         let timeCart = {
             break: newTime,
         };
+
         localStorage.setItem('breaks', JSON.stringify(timeCart));
     }
 
+
+
+
     return (
         <div>
-            <div className='main-container w-11/12 mx-auto mt-20'>
+            <div className='main-container w-11/12 mx-auto'>
                 <div className="carts-container">
-                    <div className='flex space-x-3 text-2xl font-bold items-center text-blue-700 mb-10'>
+                    <div className='mt-20 flex flex-col items-center space-x-3 lg:text-2xl font-bold text-blue-700 mb-10'>
                         <FontAwesomeIcon icon={faSchool}></FontAwesomeIcon>
                         <h1>MY-DAILY-STUDY-ACTIVITIES</h1>
                     </div>
@@ -54,7 +62,7 @@ const Carts = () => {
                         }
                     </div>
                 </div>
-                <div className="my-info-container p-5 text-center">
+                <div className="p-5 text-center">
                     <SideCart faLocation={faLocation}></SideCart>
                     <Breaks carts={carts} handleAddToBreakTime={handleAddToBreakTime}></Breaks>
                     <Details breaks={breaks} times={times}></Details>

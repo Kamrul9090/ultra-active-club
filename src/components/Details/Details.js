@@ -7,6 +7,9 @@ const Details = (props) => {
     for (const time of times) {
         totalStudyTime = totalStudyTime + time;
     }
+    const handleToast = () => {
+        alert('Today my study activities complete')
+    }
     return (
         <div className='mt-10 font-bold'>
             <h2 className='mb-10'>Study Details</h2>
@@ -22,7 +25,7 @@ const Details = (props) => {
                 </div>
             </div>
 
-            <button className='bg-blue-500 py-3 px-3 w-full rounded mt-5 text-white'>Activity Completed</button>
+            <button onClick={handleToast} className='bg-blue-500 py-3 px-3 w-full rounded mt-5 text-white'>Activity Completed</button>
         </div>
     );
 };
