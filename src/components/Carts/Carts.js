@@ -39,11 +39,9 @@ const Carts = () => {
         localStorage.setItem('breaks', JSON.stringify(timeCart));
 
         const storedCart = localStorage.getItem('breaks');
-        if (storedCart) {
-            const parseData = JSON.parse(storedCart);
-            const breakTime = parseData.break;
-            setBreakTimes(breakTime);
-        }
+
+        const parseData = JSON.parse(storedCart);
+        setBreakTimes(parseData.break)
     }
 
 

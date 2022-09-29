@@ -1,5 +1,4 @@
 import React from 'react';
-import './Details.css'
 import Swal from 'sweetalert2';
 
 

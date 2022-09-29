@@ -1,5 +1,5 @@
 import React from 'react';
-import './SingleCart.js.css'
+// import './SingleCart.js.css'
 const SingleCart = ({ cart, handleAddToCart }) => {
     const { name, picture, time, about } = cart;
 
